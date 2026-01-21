@@ -101,6 +101,34 @@ body {
     color: var(--deep-blue);
 }
 
+/* Language Selector */
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.language-select {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.language-select:hover {
+    border-color: var(--teal-green);
+}
+
+.language-select:focus {
+    border-color: var(--deep-blue);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
 /* Hero Section */
 .hero-section {
     min-height: 100vh;

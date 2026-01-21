@@ -16,9 +16,17 @@
                 <span class="logo-text">Wocon</span>
             </div>
             <div class="nav-menu">
-                <a href="#hero" class="nav-link">Home</a>
-                <a href="#download" class="nav-link">Download</a>
-                <a href="#team" class="nav-link">Team</a>
+                <a href="#hero" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="#download" class="nav-link" data-i18n="nav.download">Download</a>
+                <a href="#team" class="nav-link" data-i18n="nav.team">Team</a>
+            </div>
+            <div class="language-selector">
+                <select id="language-select" class="language-select">
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                    <option value="es">Español</option>
+                    <option value="hi">हिंदी</option>
+                </select>
             </div>
         </div>
     </nav>
@@ -27,12 +35,12 @@
     <section id="hero" class="hero-section">
         <div class="hero-container">
             <h1 class="hero-title">Wocon</h1>
-            <p class="hero-subtitle">Experience what you never imagined, starting from here.</p>
-            <p class="hero-description">
-                Wocon is a travel application (available on web, Windows, Android, and iOS) 
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Experience what you never imagined, starting from here.</p>
+            <p class="hero-description" data-i18n="hero.description">
+                Wocon is a travel application (available on web, Windows, Android, and iOS)
                 that helps you find travel companions.
             </p>
-            <button class="cta-button cartoon-button" onclick="scrollToDownload()">
+            <button class="cta-button cartoon-button" onclick="scrollToDownload()" data-i18n="hero.cta">
                 Start Here
             </button>
         </div>
@@ -41,9 +49,9 @@
     <!-- Download Section -->
     <section id="download" class="download-section">
         <div class="download-container">
-            <h2 class="section-title">Download Wocon</h2>
-            <p class="section-subtitle">Choose your platform and start your journey</p>
-            
+            <h2 class="section-title" data-i18n="download.title">Download Wocon</h2>
+            <p class="section-subtitle" data-i18n="download.subtitle">Choose your platform and start your journey</p>
+
             <div class="platform-cards">
                 <!-- Web -->
                 <div class="platform-card">
@@ -54,9 +62,9 @@
                             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                         </svg>
                     </div>
-                    <h3 class="platform-name">Web</h3>
-                    <p class="platform-desc">Access Wocon directly in your browser</p>
-                    <a href="#" class="download-button cartoon-button">Download</a>
+                    <h3 class="platform-name" data-i18n="platform.web">Web</h3>
+                    <p class="platform-desc" data-i18n="platform.web.desc">Access Wocon directly in your browser</p>
+                    <a href="#" class="download-button cartoon-button" data-i18n="button.download">Download</a>
                 </div>
 
                 <!-- Windows -->
@@ -66,9 +74,9 @@
                             <path d="M0 3.449L9.75 2.1v9.451H0V3.449zm10.949-1.714L24 0v11.4H10.949V1.735zM0 12.45h9.75v9.451L0 20.55V12.45zm10.949 0H24V24l-13.051-1.737V12.45z"/>
                         </svg>
                     </div>
-                    <h3 class="platform-name">Windows</h3>
-                    <p class="platform-desc">Download for Windows 10 and 11</p>
-                    <a href="#" class="download-button cartoon-button">Download</a>
+                    <h3 class="platform-name" data-i18n="platform.windows">Windows</h3>
+                    <p class="platform-desc" data-i18n="platform.windows.desc">Download for Windows 10 and 11</p>
+                    <a href="#" class="download-button cartoon-button" data-i18n="button.download">Download</a>
                 </div>
 
                 <!-- Android -->
@@ -78,9 +86,9 @@
                             <path d="M17.523 2.047a.5.5 0 0 0-.452.299l-1.134 2.617C14.727 4.32 13.389 4 12 4c-1.389 0-2.727.32-3.937.963l-1.134-2.617a.5.5 0 0 0-.452-.299l-.004.001a.5.5 0 0 0-.452.699l1.163 2.684C4.825 7.005 2.5 9.756 2.5 13H2v1h.5v.5c0 .276.224.5.5.5h1v.5a.5.5 0 0 0 .5.5h1v-6h13v6h1a.5.5 0 0 0 .5-.5V15h1c.276 0 .5-.224.5-.5V14h.5v-1h-.5c0-3.244-2.325-5.995-4.686-7.07l1.163-2.684a.5.5 0 0 0-.456-.699l-.004-.001zM8 10a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm8 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM4 15h16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3z"/>
                         </svg>
                     </div>
-                    <h3 class="platform-name">Android</h3>
-                    <p class="platform-desc">Download from Google Play Store</p>
-                    <a href="#" class="download-button cartoon-button">Download</a>
+                    <h3 class="platform-name" data-i18n="platform.android">Android</h3>
+                    <p class="platform-desc" data-i18n="platform.android.desc">Download from Google Play Store</p>
+                    <a href="#" class="download-button cartoon-button" data-i18n="button.download">Download</a>
                 </div>
 
                 <!-- iOS -->
@@ -90,9 +98,9 @@
                             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.07-3.11-1.05.05-2.31.74-3.06 1.61-.69.82-1.26 2.05-1.11 3.17 1.16.09 2.35-.75 3.1-1.67z"/>
                         </svg>
                     </div>
-                    <h3 class="platform-name">iOS</h3>
-                    <p class="platform-desc">Download from App Store</p>
-                    <a href="#" class="download-button cartoon-button">Download</a>
+                    <h3 class="platform-name" data-i18n="platform.ios">iOS</h3>
+                    <p class="platform-desc" data-i18n="platform.ios.desc">Download from App Store</p>
+                    <a href="#" class="download-button cartoon-button" data-i18n="button.download">Download</a>
                 </div>
             </div>
         </div>
@@ -101,10 +109,10 @@
     <!-- Team Section -->
     <section id="team" class="team-section">
         <div class="team-container">
-            <h2 class="section-title">Development Team</h2>
-            <p class="section-subtitle">Meet the people behind Wocon</p>
+            <h2 class="section-title" data-i18n="team.title">Development Team</h2>
+            <p class="section-subtitle" data-i18n="team.subtitle">Meet the people behind Wocon</p>
             <div class="team-placeholder">
-                <p>Coming soon...</p>
+                <p data-i18n="team.placeholder">Coming soon...</p>
             </div>
         </div>
     </section>
@@ -112,10 +120,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <p>&copy; 2026 Wocon. All rights reserved. Oasis Company</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Wocon. All rights reserved. Oasis Company</p>
         </div>
     </footer>
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
