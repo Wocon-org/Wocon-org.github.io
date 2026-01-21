@@ -1,0 +1,14 @@
+# robots.txt for Wocon.org
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wocon-org.github.io/sitemap.xml
+
+# Disallow development folders
+Disallow: /开发参考/
+Disallow: /*.txt$
+
+# Crawl-delay (optional)
+Crawl-delay: 1

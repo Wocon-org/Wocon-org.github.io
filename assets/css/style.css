@@ -435,10 +435,26 @@ body {
 
     .nav-menu {
         gap: var(--spacing-md);
+        font-size: 0.85rem;
     }
 
     .nav-link {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-controls {
+        gap: var(--spacing-sm);
+    }
+
+    .language-select {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.8rem 0.5rem 0.8rem;
+    }
+
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
     }
 
     .platform-cards {
@@ -447,5 +463,37 @@ body {
 
     .section-title {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 var(--spacing-sm);
+        height: auto;
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .nav-logo {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-menu {
+        gap: var(--spacing-sm);
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-controls {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
     }
 }
