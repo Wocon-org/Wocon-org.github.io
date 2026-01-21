@@ -1,3 +1,25 @@
+// Theme Toggle
+let currentTheme = localStorage.getItem('wocon-theme') || 'light';
+
+function toggleTheme() {
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('wocon-theme', currentTheme);
+    updateTheme();
+}
+
+function updateTheme() {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    const themeIcon = document.querySelector('.theme-icon');
+    if (themeIcon) {
+        themeIcon.textContent = currentTheme === 'light' ? '🌙' : '☀️';
+    }
+}
+
+// Initialize theme
+document.addEventListener('DOMContentLoaded', () => {
+    updateTheme();
+});
+
 // Smooth scroll to download section
 function scrollToDownload() {
     const downloadSection = document.getElementById('download');

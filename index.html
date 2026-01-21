@@ -20,13 +20,18 @@
                 <a href="#download" class="nav-link" data-i18n="nav.download">Download</a>
                 <a href="#team" class="nav-link" data-i18n="nav.team">Team</a>
             </div>
-            <div class="language-selector">
-                <select id="language-select" class="language-select">
-                    <option value="en">English</option>
-                    <option value="zh">中文</option>
-                    <option value="es">Español</option>
-                    <option value="hi">हिंदी</option>
-                </select>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle cartoon-button" onclick="toggleTheme()">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="language-selector">
+                    <select id="language-select" class="language-select">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="es">Español</option>
+                        <option value="hi">हिंदी</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
@@ -64,7 +69,7 @@
                     </div>
                     <h3 class="platform-name" data-i18n="platform.web">Web</h3>
                     <p class="platform-desc" data-i18n="platform.web.desc">Access Wocon directly in your browser</p>
-                    <a href="#" class="download-button cartoon-button" data-i18n="button.download">Download</a>
+                    <a href="https://wocon.pages.dev/" target="_blank" class="download-button cartoon-button" data-i18n="button.download">Download</a>
                 </div>
 
                 <!-- Windows -->

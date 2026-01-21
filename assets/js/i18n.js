@@ -5,6 +5,8 @@ const translations = {
         'nav.home': 'Home',
         'nav.download': 'Download',
         'nav.team': 'Team',
+        'theme.light': 'Light Mode',
+        'theme.dark': 'Dark Mode',
 
         // Hero Section
         'hero.title': 'Wocon',
@@ -38,6 +40,8 @@ const translations = {
         'nav.home': '首页',
         'nav.download': '下载',
         'nav.team': '团队',
+        'theme.light': '浅色模式',
+        'theme.dark': '深色模式',
 
         // Hero Section
         'hero.title': 'Wocon',
@@ -71,6 +75,8 @@ const translations = {
         'nav.home': 'Inicio',
         'nav.download': 'Descargar',
         'nav.team': 'Equipo',
+        'theme.light': 'Modo Claro',
+        'theme.dark': 'Modo Oscuro',
 
         // Hero Section
         'hero.title': 'Wocon',
@@ -104,6 +110,8 @@ const translations = {
         'nav.home': 'होम',
         'nav.download': 'डाउनलोड',
         'nav.team': 'टीम',
+        'theme.light': 'लाइट मोड',
+        'theme.dark': 'डार्क मोड',
 
         // Hero Section
         'hero.title': 'Wocon',
