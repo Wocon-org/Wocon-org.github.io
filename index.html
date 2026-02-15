@@ -158,6 +158,24 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
+        <!-- Background Video -->
+        <div class="hero-video-container">
+            <video id="hero-video" class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/video/wocon preview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <!-- Play/Pause Button -->
+        <button id="video-toggle" class="video-toggle" onclick="toggleHeroVideo()" aria-label="Toggle background video">
+            <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+        </button>
+        
         <div class="hero-container fade-in-up">
             <h1 class="hero-title">Wocon</h1>
             <p class="hero-subtitle" data-i18n="hero.subtitle">Experience what you never imagined, starting from here.</p>
