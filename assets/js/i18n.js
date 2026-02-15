@@ -3,7 +3,9 @@ const translations = {
     en: {
         // Navigation
         'nav.home': 'Home',
+        'nav.video': 'Video',
         'nav.download': 'Download',
+        'nav.docs': 'Docs',
         'nav.team': 'Team',
         'theme.light': 'Light Mode',
         'theme.dark': 'Dark Mode',
@@ -43,7 +45,9 @@ const translations = {
     zh: {
         // Navigation
         'nav.home': '首页',
+        'nav.video': '视频',
         'nav.download': '下载',
+        'nav.docs': '文档',
         'nav.team': '团队',
         'theme.light': '浅色模式',
         'theme.dark': '深色模式',
@@ -53,6 +57,11 @@ const translations = {
         'hero.subtitle': '经历你未曾所想，从这里开始',
         'hero.description': 'Wocon 是一款旅游软件（支持网页、Windows、安卓和 iOS），帮助你找到旅行伙伴。',
         'hero.cta': '从这里开始',
+
+        // Video Section
+        'video.title': '宣传视频',
+        'video.subtitle': '观看我们的故事',
+        'video.placeholder': '暂无',
 
         // Download Section
         'download.title': '下载 Wocon',
@@ -78,7 +87,9 @@ const translations = {
     es: {
         // Navigation
         'nav.home': 'Inicio',
+        'nav.video': 'Video',
         'nav.download': 'Descargar',
+        'nav.docs': 'Documentos',
         'nav.team': 'Equipo',
         'theme.light': 'Modo Claro',
         'theme.dark': 'Modo Oscuro',
@@ -88,6 +99,11 @@ const translations = {
         'hero.subtitle': 'Experimenta lo que nunca imaginaste, comienza aquí.',
         'hero.description': 'Wocon es una aplicación de viajes (disponible en web, Windows, Android y iOS) que te ayuda a encontrar compañeros de viaje.',
         'hero.cta': 'Comenzar Aquí',
+
+        // Video Section
+        'video.title': 'Video Promocional',
+        'video.subtitle': 'Mira nuestra historia',
+        'video.placeholder': 'No disponible',
 
         // Download Section
         'download.title': 'Descargar Wocon',
@@ -113,7 +129,9 @@ const translations = {
     hi: {
         // Navigation
         'nav.home': 'होम',
+        'nav.video': 'वीडियो',
         'nav.download': 'डाउनलोड',
+        'nav.docs': 'दस्तावेज़',
         'nav.team': 'टीम',
         'theme.light': 'लाइट मोड',
         'theme.dark': 'डार्क मोड',
@@ -123,6 +141,11 @@ const translations = {
         'hero.subtitle': 'जो आपने कभी नहीं सोचा था, वह अनुभव करें, यहां से शुरू करें।',
         'hero.description': 'Wocon एक यात्रा एप्लिकेशन है (वेब, विंडोज, एंड्रॉइड और आईओएस पर उपलब्ध) जो आपको यात्रा साथी खोजने में मदद करता है।',
         'hero.cta': 'यहां से शुरू करें',
+
+        // Video Section
+        'video.title': 'प्रोमोशनल वीडियो',
+        'video.subtitle': 'हमारी कहानी देखें',
+        'video.placeholder': 'उपलब्ध नहीं',
 
         // Download Section
         'download.title': 'Wocon डाउनलोड करें',
