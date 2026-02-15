@@ -1165,6 +1165,32 @@ body {
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.member-contact {
+    font-size: 0.9rem;
+    margin-top: var(--spacing-xs);
+}
+
+.contact-link {
+    color: var(--deep-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: var(--teal-green);
+    text-decoration: underline;
+}
+
+[data-theme="dark"] .contact-link {
+    color: var(--teal-green);
+}
+
+[data-theme="dark"] .contact-link:hover {
+    color: var(--deep-blue);
 }
 
 .member-link {
