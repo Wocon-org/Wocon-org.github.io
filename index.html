@@ -113,6 +113,17 @@
         </div>
     </section>
 
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="video-container">
+            <h2 class="section-title" data-i18n="video.title">Promotional Video</h2>
+            <p class="section-subtitle" data-i18n="video.subtitle">Watch our story</p>
+            <div class="video-placeholder">
+                <p>暂无</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Download Section -->
     <section id="download" class="download-section">
         <div class="download-container">
@@ -123,10 +134,10 @@
                 <!-- Web -->
                 <div class="platform-card fade-in-up">
                     <div class="platform-icon web-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M2 12h20"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="3" y="3" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M8 12h8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 8v8" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
                     <h3 class="platform-name" data-i18n="platform.web">Web</h3>
@@ -138,7 +149,10 @@
                 <div class="platform-card fade-in-up">
                     <div class="platform-icon windows-icon">
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M0 3.449L9.75 2.1v9.451H0V3.449zm10.949-1.714L24 0v11.4H10.949V1.735zM0 12.45h9.75v9.451L0 20.55V12.45zm10.949 0H24V24l-13.051-1.737V12.45z"/>
+                            <rect x="3" y="3" width="8" height="8"/>
+                            <rect x="13" y="3" width="8" height="8"/>
+                            <rect x="3" y="13" width="8" height="8"/>
+                            <rect x="13" y="13" width="8" height="8"/>
                         </svg>
                     </div>
                     <h3 class="platform-name" data-i18n="platform.windows">Windows</h3>
@@ -150,7 +164,10 @@
                 <div class="platform-card fade-in-up">
                     <div class="platform-icon android-icon">
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.523 2.047a.5.5 0 0 0-.452.299l-1.134 2.617C14.727 4.32 13.389 4 12 4c-1.389 0-2.727.32-3.937.963l-1.134-2.617a.5.5 0 0 0-.452-.299l-.004.001a.5.5 0 0 0-.452.699l1.163 2.684C4.825 7.005 2.5 9.756 2.5 13H2v1h.5v.5c0 .276.224.5.5.5h1v.5a.5.5 0 0 0 .5.5h1v-6h13v6h1a.5.5 0 0 0 .5-.5V15h1c.276 0 .5-.224.5-.5V14h.5v-1h-.5c0-3.244-2.325-5.995-4.686-7.07l1.163-2.684a.5.5 0 0 0-.456-.699l-.004-.001zM8 10a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm8 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM4 15h16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3z"/>
+                            <rect x="5" y="3" width="14" height="18"/>
+                            <path d="M9 7h6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 11h6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 15h6" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
                     <h3 class="platform-name" data-i18n="platform.android">Android</h3>
@@ -162,7 +179,8 @@
                 <div class="platform-card fade-in-up">
                     <div class="platform-icon ios-icon">
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.07-3.11-1.05.05-2.31.74-3.06 1.61-.69.82-1.26 2.05-1.11 3.17 1.16.09 2.35-.75 3.1-1.67z"/>
+                            <rect x="4" y="3" width="16" height="18" rx="2"/>
+                            <rect x="8" y="7" width="8" height="10"/>
                         </svg>
                     </div>
                     <h3 class="platform-name" data-i18n="platform.ios">iOS</h3>
@@ -178,8 +196,19 @@
         <div class="team-container">
             <h2 class="section-title" data-i18n="team.title">Development Team</h2>
             <p class="section-subtitle" data-i18n="team.subtitle">Meet the people behind Wocon</p>
-            <div class="team-placeholder">
-                <p data-i18n="team.placeholder">Coming soon...</p>
+            <div class="team-members">
+                <!-- CEO -->
+                <div class="team-member">
+                    <div class="member-avatar">C</div>
+                    <h3 class="member-name">Ceaser Zhao</h3>
+                    <p class="member-role">CEO</p>
+                </div>
+                <!-- Member -->
+                <div class="team-member">
+                    <div class="member-avatar">E</div>
+                    <h3 class="member-name">Evan Tang</h3>
+                    <p class="member-role">Member</p>
+                </div>
             </div>
         </div>
     </section>
