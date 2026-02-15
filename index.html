@@ -278,6 +278,385 @@
         </div>
     </section>
 
+    <!-- Database Schema Section -->
+    <section id="database" class="database-section geometric-bg">
+        <div class="database-container">
+            <h2 class="section-title" data-i18n="database.title">Database Schema</h2>
+            <p class="section-subtitle" data-i18n="database.subtitle">Visual representation of the Wocon database structure</p>
+            
+            <!-- Database Architecture Visualization -->
+            <div class="database-architecture">
+                <h3 data-i18n="database.architecture">Database Architecture</h3>
+                <div class="architecture-tree interactive-tree">
+                    <div class="tree-node root">
+                        <span class="node-name">auth.users</span>
+                        <div class="tree-children">
+                            <div class="tree-node">
+                                <span class="node-name">profiles</span>
+                                <div class="tree-children">
+                                    <div class="tree-node">
+                                        <span class="node-name">trips</span>
+                                        <div class="tree-children">
+                                            <div class="tree-node">
+                                                <span class="node-name">trip_members</span>
+                                            </div>
+                                            <div class="tree-node">
+                                                <span class="node-name">trip_items</span>
+                                            </div>
+                                            <div class="tree-node">
+                                                <span class="node-name">comments</span>
+                                            </div>
+                                            <div class="tree-node">
+                                                <span class="node-name">trip_likes</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node">
+                                        <span class="node-name">friendships</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tree-node">
+                                <span class="node-name">cities (GeoNames)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Core Tables -->
+            <div class="database-tables">
+                <h3 data-i18n="database.tables">Core Tables</h3>
+                <div class="tables-grid">
+                    <!-- profiles Table -->
+                    <div class="table-card" onclick="toggleTableDetails('profiles')">
+                        <h4>profiles</h4>
+                        <div class="table-description">Extended user information linked to Supabase auth.users</div>
+                        <div class="table-arrow">→</div>
+                        <div class="table-details" id="profiles-details">
+                            <div class="table-structure">
+                                <div class="table-row">
+                                    <span class="column-name">id</span>
+                                    <span class="column-type">UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">username</span>
+                                    <span class="column-type">TEXT UNIQUE NOT NULL</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">nickname</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">avatar_url</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">created_at</span>
+                                    <span class="column-type">TIMESTAMP DEFAULT now()</span>
+                                </div>
+                            </div>
+                            <div class="table-rules">
+                                <h5>Key Rules:</h5>
+                                <ul>
+                                    <li><code>username</code> is immutable</li>
+                                    <li><code>nickname</code> is mutable</li>
+                                    <li>Deleting a user cascades to delete their profile</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- cities Table -->
+                    <div class="table-card" onclick="toggleTableDetails('cities')">
+                        <h4>cities</h4>
+                        <div class="table-description">Read-only GeoNames data for location information</div>
+                        <div class="table-arrow">→</div>
+                        <div class="table-details" id="cities-details">
+                            <div class="table-structure">
+                                <div class="table-row">
+                                    <span class="column-name">geonameid</span>
+                                    <span class="column-type">BIGINT PRIMARY KEY</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">name</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">asciiname</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">alternatenames</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">latitude</span>
+                                    <span class="column-type">DOUBLE PRECISION</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">longitude</span>
+                                    <span class="column-type">DOUBLE PRECISION</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">feature_class</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">feature_code</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">country_code</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">admin1</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">population</span>
+                                    <span class="column-type">BIGINT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">timezone</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">modification_date</span>
+                                    <span class="column-type">DATE</span>
+                                </div>
+                            </div>
+                            <div class="table-indexes">
+                                <h5>Essential Indexes:</h5>
+                                <ul>
+                                    <li><code>cities_name_idx</code> ON cities(name)</li>
+                                    <li><code>cities_asciiname_idx</code> ON cities(asciiname)</li>
+                                    <li><code>cities_lat_lng_idx</code> ON cities(latitude, longitude)</li>
+                                    <li><code>cities_name_trgm</code> ON cities USING gin (name gin_trgm_ops)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- trips Table -->
+                    <div class="table-card" onclick="toggleTableDetails('trips')">
+                        <h4>trips</h4>
+                        <div class="table-description">Core trip information</div>
+                        <div class="table-arrow">→</div>
+                        <div class="table-details" id="trips-details">
+                            <div class="table-structure">
+                                <div class="table-row">
+                                    <span class="column-name">id</span>
+                                    <span class="column-type">UUID PRIMARY KEY DEFAULT uuid_generate_v4()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">title</span>
+                                    <span class="column-type">TEXT NOT NULL</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">is_public</span>
+                                    <span class="column-type">BOOLEAN DEFAULT false</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">owner_id</span>
+                                    <span class="column-type">UUID REFERENCES profiles(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">created_at</span>
+                                    <span class="column-type">TIMESTAMP DEFAULT now()</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- trip_members Table -->
+                    <div class="table-card" onclick="toggleTableDetails('trip_members')">
+                        <h4>trip_members</h4>
+                        <div class="table-description">Trip participation management with roles</div>
+                        <div class="table-arrow">→</div>
+                        <div class="table-details" id="trip_members-details">
+                            <div class="table-structure">
+                                <div class="table-row">
+                                    <span class="column-name">id</span>
+                                    <span class="column-type">UUID PRIMARY KEY DEFAULT uuid_generate_v4()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">trip_id</span>
+                                    <span class="column-type">UUID REFERENCES trips(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">user_id</span>
+                                    <span class="column-type">UUID REFERENCES profiles(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">role</span>
+                                    <span class="column-type">TEXT CHECK (role IN ('owner','partner'))</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">status</span>
+                                    <span class="column-type">TEXT CHECK (status IN ('active','left'))</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">joined_at</span>
+                                    <span class="column-type">TIMESTAMP DEFAULT now()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">UNIQUE</span>
+                                    <span class="column-type">(trip_id, user_id)</span>
+                                </div>
+                            </div>
+                            <div class="table-rules">
+                                <h5>Key Rules:</h5>
+                                <ul>
+                                    <li><code>owner</code> cannot leave a trip</li>
+                                    <li><code>partner</code> can leave a trip</li>
+                                    <li>Deleting a trip cascades to delete all members</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- trip_items Table -->
+                    <div class="table-card" onclick="toggleTableDetails('trip_items')">
+                        <h4>trip_items</h4>
+                        <div class="table-description">Trip locations/items management</div>
+                        <div class="table-arrow">→</div>
+                        <div class="table-details" id="trip_items-details">
+                            <div class="table-structure">
+                                <div class="table-row">
+                                    <span class="column-name">id</span>
+                                    <span class="column-type">UUID PRIMARY KEY DEFAULT uuid_generate_v4()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">trip_id</span>
+                                    <span class="column-type">UUID REFERENCES trips(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">city_id</span>
+                                    <span class="column-type">BIGINT REFERENCES cities(geonameid)</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">order_index</span>
+                                    <span class="column-type">INTEGER</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">note</span>
+                                    <span class="column-type">TEXT</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">created_at</span>
+                                    <span class="column-type">TIMESTAMP DEFAULT now()</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- comments Table -->
+                    <div class="table-card" onclick="toggleTableDetails('comments')">
+                        <h4>comments</h4>
+                        <div class="table-description">Trip comments and replies</div>
+                        <div class="table-arrow">→</div>
+                        <div class="table-details" id="comments-details">
+                            <div class="table-structure">
+                                <div class="table-row">
+                                    <span class="column-name">id</span>
+                                    <span class="column-type">UUID PRIMARY KEY DEFAULT uuid_generate_v4()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">trip_id</span>
+                                    <span class="column-type">UUID REFERENCES trips(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">user_id</span>
+                                    <span class="column-type">UUID REFERENCES profiles(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">parent_id</span>
+                                    <span class="column-type">UUID REFERENCES comments(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">content</span>
+                                    <span class="column-type">TEXT NOT NULL</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">created_at</span>
+                                    <span class="column-type">TIMESTAMP DEFAULT now()</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- trip_likes Table -->
+                    <div class="table-card" onclick="toggleTableDetails('trip_likes')">
+                        <h4>trip_likes</h4>
+                        <div class="table-description">Trip likes management</div>
+                        <div class="table-arrow">→</div>
+                        <div class="table-details" id="trip_likes-details">
+                            <div class="table-structure">
+                                <div class="table-row">
+                                    <span class="column-name">id</span>
+                                    <span class="column-type">UUID PRIMARY KEY DEFAULT uuid_generate_v4()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">trip_id</span>
+                                    <span class="column-type">UUID REFERENCES trips(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">user_id</span>
+                                    <span class="column-type">UUID REFERENCES profiles(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">created_at</span>
+                                    <span class="column-type">TIMESTAMP DEFAULT now()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">UNIQUE</span>
+                                    <span class="column-type">(trip_id, user_id)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- friendships Table -->
+                    <div class="table-card" onclick="toggleTableDetails('friendships')">
+                        <h4>friendships</h4>
+                        <div class="table-description">User friendships management</div>
+                        <div class="table-arrow">→</div>
+                        <div class="table-details" id="friendships-details">
+                            <div class="table-structure">
+                                <div class="table-row">
+                                    <span class="column-name">id</span>
+                                    <span class="column-type">UUID PRIMARY KEY DEFAULT uuid_generate_v4()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">requester_id</span>
+                                    <span class="column-type">UUID REFERENCES profiles(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">addressee_id</span>
+                                    <span class="column-type">UUID REFERENCES profiles(id) ON DELETE CASCADE</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">status</span>
+                                    <span class="column-type">TEXT CHECK (status IN ('pending','accepted','rejected'))</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">created_at</span>
+                                    <span class="column-type">TIMESTAMP DEFAULT now()</span>
+                                </div>
+                                <div class="table-row">
+                                    <span class="column-name">UNIQUE</span>
+                                    <span class="column-type">(requester_id, addressee_id)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Team Section -->
     <section id="team" class="team-section geometric-accent">
         <div class="team-container">
