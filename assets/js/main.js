@@ -158,3 +158,41 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }
     });
 });
+
+// Toggle table details in database schema section
+function toggleTableDetails(id) {
+    const details = document.getElementById(id + '-details');
+    const card = details.closest('.table-card');
+    
+    // Toggle the active class and details visibility
+    card.classList.toggle('active');
+    details.classList.toggle('show');
+}
+
+// Close other table details when opening a new one
+document.querySelectorAll('.table-card').forEach(card => {
+    card.addEventListener('click', function() {
+        // Close all other cards
+        document.querySelectorAll('.table-card').forEach(otherCard => {
+            if (otherCard !== this) {
+                otherCard.classList.remove('active');
+                const otherDetails = otherCard.querySelector('.table-details');
+                if (otherDetails) {
+                    otherDetails.classList.remove('show');
+                }
+            }
+        });
+    });
+});
+
+// Add animation to database architecture tree nodes
+document.querySelectorAll('.tree-node').forEach(node => {
+    node.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateX(5px)';
+        this.style.transition = 'transform 0.3s ease';
+    });
+    
+    node.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateX(0)';
+    });
+});
