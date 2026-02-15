@@ -14,6 +14,11 @@ const translations = {
         'hero.description': 'Wocon is a travel application (available on web, Windows, Android, and iOS) that helps you find travel companions.',
         'hero.cta': 'Start Here',
 
+        // Video Section
+        'video.title': 'Promotional Video',
+        'video.subtitle': 'Watch our story',
+        'video.placeholder': 'Not available',
+
         // Download Section
         'download.title': 'Download Wocon',
         'download.subtitle': 'Choose your platform and start your journey',
