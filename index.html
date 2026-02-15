@@ -77,7 +77,15 @@
             <div class="nav-logo">
                 <span class="logo-text">Wocon</span>
             </div>
-            <div class="nav-menu">
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button" id="mobile-menu-button" onclick="toggleMobileMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
                 <a href="#hero" class="nav-link" data-i18n="nav.home">Home</a>
                 <a href="#video" class="nav-link" data-i18n="nav.video">Video</a>
                 <a href="#download" class="nav-link" data-i18n="nav.download">Download</a>
@@ -131,7 +139,7 @@
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="download-section">
+    <section id="download" class="download-section geometric-bg">
         <div class="download-container">
             <h2 class="section-title" data-i18n="download.title">Download Wocon</h2>
             <p class="section-subtitle" data-i18n="download.subtitle">Choose your platform and start your journey</p>
@@ -198,7 +206,7 @@
     </section>
 
     <!-- Docs Section -->
-    <section id="docs" class="docs-section">
+    <section id="docs" class="docs-section geometric-bg-light">
         <div class="docs-container">
             <h2 class="section-title" data-i18n="docs.title">Documentation</h2>
             <p class="section-subtitle" data-i18n="docs.subtitle">Explore our project documentation</p>
@@ -250,7 +258,7 @@
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="team-section">
+    <section id="team" class="team-section geometric-accent">
         <div class="team-container">
             <h2 class="section-title" data-i18n="team.title">Development Team</h2>
             <p class="section-subtitle" data-i18n="team.subtitle">Meet the people behind Wocon</p>

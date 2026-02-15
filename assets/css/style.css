@@ -58,6 +58,41 @@ html {
     transition: all 0.3s ease-in-out;
 }
 
+/* Swiss Style Geometric Patterns */
+.geometric-bg {
+    background-image: 
+        linear-gradient(rgba(30, 58, 138, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 58, 138, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.geometric-bg-light {
+    background-image: 
+        linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    background-size: 25px 25px;
+}
+
+.geometric-accent {
+    position: relative;
+    overflow: hidden;
+}
+
+.geometric-accent::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        linear-gradient(45deg, transparent 48%, rgba(30, 58, 138, 0.05) 49%, rgba(30, 58, 138, 0.05) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(16, 185, 129, 0.05) 49%, rgba(16, 185, 129, 0.05) 51%, transparent 52%);
+    background-size: 30px 30px;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -124,6 +159,28 @@ body {
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+    display: none;
+    padding: 0.5rem;
+    background: var(--background-light);
+    border: 2px solid var(--deep-blue);
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1001;
+}
+
+.mobile-menu-button:hover {
+    background: var(--deep-blue);
+    color: white;
+}
+
+.mobile-menu-button svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* Theme Toggle Button */
@@ -789,14 +846,36 @@ body {
         font-size: 1rem;
     }
 
+    /* Mobile Menu */
+    .mobile-menu-button {
+        display: block;
+    }
+
     .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--background);
+        border-bottom: 2px solid var(--deep-blue);
+        flex-direction: column;
+        align-items: center;
+        padding: var(--spacing-md) 0;
         gap: var(--spacing-md);
-        font-size: 0.85rem;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+        box-shadow: var(--shadow-medium);
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
     }
 
     .nav-link {
-        font-size: 0.85rem;
-        letter-spacing: 0.3px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        padding: var(--spacing-sm) 0;
     }
 
     .nav-controls {
