@@ -114,6 +114,30 @@ body {
     z-index: 1000;
 }
 
+/* Dark Mode Navigation Bar */
+[data-theme="dark"] .navbar {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 2px solid var(--teal-green);
+}
+
+/* Dark Mode Navigation Links */
+[data-theme="dark"] .nav-link {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .nav-link:hover {
+    color: var(--teal-green);
+}
+
+[data-theme="dark"] .nav-link::after {
+    background: var(--teal-green);
+}
+
+/* Dark Mode Logo */
+[data-theme="dark"] .nav-logo {
+    color: var(--teal-green);
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -491,6 +515,12 @@ body {
     align-items: center;
     margin-bottom: var(--spacing-md);
     height: 80px;
+    width: 100%;
+}
+
+.platform-icon svg {
+    display: block;
+    margin: 0 auto;
 }
 
 .web-icon {

@@ -6,6 +6,7 @@ const translations = {
         'nav.video': 'Video',
         'nav.download': 'Download',
         'nav.docs': 'Docs',
+        'nav.database': 'Database',
         'nav.team': 'Team',
         'theme.light': 'Light Mode',
         'theme.dark': 'Dark Mode',
@@ -47,6 +48,11 @@ const translations = {
         'team.subtitle': 'Meet the people behind Wocon',
         'team.placeholder': 'Coming soon...',
 
+        // Database Schema Section
+        'database.title': 'Database Schema',
+        'database.subtitle': 'Visual representation of the Wocon database structure',
+        'database.architecture': 'Database Architecture',
+
         // Footer
         'footer.copyright': '© 2026 Wocon. All rights reserved. Oasis Company'
     },
@@ -56,6 +62,7 @@ const translations = {
         'nav.video': '视频',
         'nav.download': '下载',
         'nav.docs': '文档',
+        'nav.database': '数据库',
         'nav.team': '团队',
         'theme.light': '浅色模式',
         'theme.dark': '深色模式',
@@ -97,6 +104,11 @@ const translations = {
         'team.subtitle': '认识 Wocon 背后的人们',
         'team.placeholder': '即将推出...',
 
+        // Database Schema Section
+        'database.title': '数据库架构',
+        'database.subtitle': 'Wocon 数据库结构的可视化表示',
+        'database.architecture': '数据库架构',
+
         // Footer
         'footer.copyright': '© 2026 Wocon. 版权所有。Oasis Company'
     },
@@ -106,6 +118,7 @@ const translations = {
         'nav.video': 'Video',
         'nav.download': 'Descargar',
         'nav.docs': 'Documentos',
+        'nav.database': 'Base de Datos',
         'nav.team': 'Equipo',
         'theme.light': 'Modo Claro',
         'theme.dark': 'Modo Oscuro',
@@ -147,6 +160,11 @@ const translations = {
         'team.subtitle': 'Conoce a las personas detrás de Wocon',
         'team.placeholder': 'Próximamente...',
 
+        // Database Schema Section
+        'database.title': 'Esquema de Base de Datos',
+        'database.subtitle': 'Representación visual de la estructura de la base de datos de Wocon',
+        'database.architecture': 'Arquitectura de la Base de Datos',
+
         // Footer
         'footer.copyright': '© 2026 Wocon. Todos los derechos reservados. Oasis Company'
     },
@@ -156,6 +174,7 @@ const translations = {
         'nav.video': 'वीडियो',
         'nav.download': 'डाउनलोड',
         'nav.docs': 'दस्तावेज़',
+        'nav.database': 'डेटाबेस',
         'nav.team': 'टीम',
         'theme.light': 'लाइट मोड',
         'theme.dark': 'डार्क मोड',
@@ -196,6 +215,11 @@ const translations = {
         'team.title': 'डेवलपमेंट टीम',
         'team.subtitle': 'Wocon के पीछे के लोगों से मिलें',
         'team.placeholder': 'जल्द आ रहा है...',
+
+        // Database Schema Section
+        'database.title': 'डेटाबेस स्कीमा',
+        'database.subtitle': 'Wocon डेटाबेस संरचना का दृश्य प्रतिनिधित्व',
+        'database.architecture': 'डेटाबेस वास्तुकला',
 
         // Footer
         'footer.copyright': '© 2026 Wocon. सभी अधिकार सुरक्षित। Oasis Company'
