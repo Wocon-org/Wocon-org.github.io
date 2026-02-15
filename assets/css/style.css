@@ -1450,4 +1450,85 @@ body {
         padding: 0.8rem 2rem;
         font-size: 1rem;
     }
+    
+    /* Mobile Video Button */
+    .video-toggle {
+        bottom: var(--spacing-lg);
+        left: var(--spacing-lg);
+        width: 50px;
+        height: 50px;
+    }
+    
+    .video-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Mobile Database Architecture */
+    .architecture-tree {
+        padding: var(--spacing-lg);
+        max-width: 100%;
+    }
+    
+    .tree-node {
+        padding-left: var(--spacing-lg);
+    }
+    
+    .node-name {
+        font-size: 0.8rem;
+        padding: var(--spacing-xs);
+    }
+    
+    /* Mobile Tables */
+    .tables-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .table-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .column-name {
+        min-width: 100px;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .column-type {
+        margin-left: 0;
+        margin-top: var(--spacing-xs);
+        width: 100%;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 768px) {
+    /* Database Schema Mobile */
+    .tables-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .database-architecture h3,
+    .database-tables h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Video Container Mobile */
+    .hero-video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hero-video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 }
