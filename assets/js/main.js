@@ -196,3 +196,21 @@ document.querySelectorAll('.tree-node').forEach(node => {
         this.style.transform = 'translateX(0)';
     });
 });
+
+// Toggle hero background video
+function toggleHeroVideo() {
+    const videoContainer = document.querySelector('.hero-video-container');
+    const video = document.getElementById('hero-video');
+    const toggleButton = document.getElementById('video-toggle');
+    
+    // Toggle active class
+    videoContainer.classList.toggle('active');
+    toggleButton.classList.toggle('active');
+    
+    // Toggle video play/pause
+    if (videoContainer.classList.contains('active')) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
