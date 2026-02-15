@@ -28,6 +28,27 @@
 
     <title>Wocon.org - Find Your Travel Companions</title>
     <link rel="icon" type="image/png" href="assets/images/woconlogo.png">
+    <script>
+        // Fallback for browsers that don't support native lazy loading
+        if ('IntersectionObserver' in window) {
+            document.addEventListener('DOMContentLoaded', function() {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                const imageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            const image = entry.target;
+                            image.src = image.dataset.src;
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(image) {
+                    imageObserver.observe(image);
+                });
+            });
+        }
+    </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
 
@@ -67,41 +88,41 @@
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()">
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Back to top" aria-hidden="true">
         ↑
     </button>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <div class="nav-logo">
+            <div class="nav-logo" role="banner">
                 <span class="logo-text">Wocon</span>
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="mobile-menu-button" id="mobile-menu-button" onclick="toggleMobileMenu()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <button class="mobile-menu-button" id="mobile-menu-button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
                 </svg>
             </button>
             
-            <div class="nav-menu" id="nav-menu">
-                <a href="#hero" class="nav-link" data-i18n="nav.home">Home</a>
-                <a href="#video" class="nav-link" data-i18n="nav.video">Video</a>
-                <a href="#download" class="nav-link" data-i18n="nav.download">Download</a>
-                <a href="#docs" class="nav-link" data-i18n="nav.docs">Docs</a>
-                <a href="#team" class="nav-link" data-i18n="nav.team">Team</a>
+            <div class="nav-menu" id="nav-menu" role="menu">
+                <a href="#hero" class="nav-link" data-i18n="nav.home" role="menuitem" tabindex="0">Home</a>
+                <a href="#video" class="nav-link" data-i18n="nav.video" role="menuitem" tabindex="0">Video</a>
+                <a href="#download" class="nav-link" data-i18n="nav.download" role="menuitem" tabindex="0">Download</a>
+                <a href="#docs" class="nav-link" data-i18n="nav.docs" role="menuitem" tabindex="0">Docs</a>
+                <a href="#team" class="nav-link" data-i18n="nav.team" role="menuitem" tabindex="0">Team</a>
             </div>
             <div class="nav-controls">
-                <button id="theme-toggle" class="theme-toggle cartoon-button" onclick="toggleTheme()">
-                    <span class="theme-icon">
+                <button id="theme-toggle" class="theme-toggle cartoon-button" onclick="toggleTheme()" aria-label="Toggle theme" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
                         </svg>
                     </span>
                 </button>
-                <div class="language-selector">
-                    <select id="language-select" class="language-select">
+                <div class="language-selector" aria-label="Language selector">
+                    <select id="language-select" class="language-select" aria-label="Select language">
                         <option value="en">English</option>
                         <option value="zh">中文</option>
                         <option value="es">Español</option>
@@ -211,17 +232,17 @@
             <h2 class="section-title" data-i18n="docs.title">Documentation</h2>
             <p class="section-subtitle" data-i18n="docs.subtitle">Explore our project documentation</p>
             <div class="docs-content">
-                <div class="docs-card" onclick="toggleDocsDetails('overview')">
+                <div class="docs-card" onclick="toggleDocsDetails('overview')" role="button" tabindex="0" aria-expanded="false" aria-controls="overview-details" aria-label="Toggle project overview details">
                     <h3 data-i18n="docs.overview">Project Overview</h3>
-                    <div class="docs-card-arrow">→</div>
-                    <div class="docs-details" id="overview-details">
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="overview-details" aria-live="polite">
                         <p>Wocon 是一个专注于旅游社交的应用，帮助用户找到志同道合的旅游伙伴，发现独特的旅行目的地。我们的目标是在你计划旅行的未知时刻，为你提供一个独一无二的解决方案。</p>
                     </div>
                 </div>
-                <div class="docs-card" onclick="toggleDocsDetails('features')">
+                <div class="docs-card" onclick="toggleDocsDetails('features')" role="button" tabindex="0" aria-expanded="false" aria-controls="features-details" aria-label="Toggle core features details">
                     <h3 data-i18n="docs.features">Core Features</h3>
-                    <div class="docs-card-arrow">→</div>
-                    <div class="docs-details" id="features-details">
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="features-details" aria-live="polite">
                         <ul>
                             <li>🗺️ 交互式地图：基于 Leaflet.js 实现的流畅地图体验</li>
                             <li>🌍 位置发现：随机跳转到全球热门旅游目的地</li>
@@ -233,10 +254,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="docs-card" onclick="toggleDocsDetails('tech')">
+                <div class="docs-card" onclick="toggleDocsDetails('tech')" role="button" tabindex="0" aria-expanded="false" aria-controls="tech-details" aria-label="Toggle technology stack details">
                     <h3 data-i18n="docs.tech">Technology Stack</h3>
-                    <div class="docs-card-arrow">→</div>
-                    <div class="docs-details" id="tech-details">
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="tech-details" aria-live="polite">
                         <ul>
                             <li>前端：Vue 3 Composition API、TypeScript、Leaflet.js</li>
                             <li>后端：Supabase (数据库和用户认证)</li>
@@ -245,12 +266,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="docs-card" onclick="toggleDocsDetails('links')">
+                <div class="docs-card" onclick="toggleDocsDetails('links')" role="button" tabindex="0" aria-expanded="false" aria-controls="links-details" aria-label="Toggle quick links details">
                     <h3 data-i18n="docs.links">Quick Links</h3>
-                    <div class="docs-card-arrow">→</div>
-                    <div class="docs-details" id="links-details">
-                        <a href="https://github.com/wocon-org/wocon_pages" target="_blank" class="docs-link">GitHub 仓库</a>
-                        <a href="https://wocon.pages.dev" target="_blank" class="docs-link">在线演示</a>
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="links-details" aria-live="polite">
+                        <a href="https://github.com/wocon-org/wocon_pages" target="_blank" class="docs-link" aria-label="GitHub repository">GitHub 仓库</a>
+                        <a href="https://wocon.pages.dev" target="_blank" class="docs-link" aria-label="Online demo">在线演示</a>
                     </div>
                 </div>
             </div>
@@ -262,18 +283,18 @@
         <div class="team-container">
             <h2 class="section-title" data-i18n="team.title">Development Team</h2>
             <p class="section-subtitle" data-i18n="team.subtitle">Meet the people behind Wocon</p>
-            <div class="team-members">
+            <div class="team-members" aria-label="Team members">
                 <!-- CEO -->
-                <div class="team-member">
-                    <a href="https://ceaserlab.github.io/" target="_blank" class="member-link">
-                        <div class="member-avatar">C</div>
+                <div class="team-member" role="article" aria-label="Team member Ceaser Zhao">
+                    <a href="https://ceaserlab.github.io/" target="_blank" class="member-link" aria-label="Visit Ceaser Zhao's website">
+                        <div class="member-avatar" aria-hidden="true">C</div>
                         <h3 class="member-name">Ceaser Zhao</h3>
                         <p class="member-role">CEO</p>
                     </a>
                 </div>
                 <!-- Member -->
-                <div class="team-member">
-                    <div class="member-avatar">E</div>
+                <div class="team-member" role="article" aria-label="Team member Evan Tang">
+                    <div class="member-avatar" aria-hidden="true">E</div>
                     <h3 class="member-name">Evan Tang</h3>
                     <p class="member-role">Member</p>
                 </div>
