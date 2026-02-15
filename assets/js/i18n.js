@@ -21,6 +21,14 @@ const translations = {
         'video.subtitle': 'Watch our story',
         'video.placeholder': 'Not available',
 
+        // Docs Section
+        'docs.title': 'Documentation',
+        'docs.subtitle': 'Explore our project documentation',
+        'docs.overview': 'Project Overview',
+        'docs.features': 'Core Features',
+        'docs.tech': 'Technology Stack',
+        'docs.links': 'Quick Links',
+
         // Download Section
         'download.title': 'Download Wocon',
         'download.subtitle': 'Choose your platform and start your journey',
@@ -62,6 +70,14 @@ const translations = {
         'video.title': '宣传视频',
         'video.subtitle': '观看我们的故事',
         'video.placeholder': '暂无',
+
+        // Docs Section
+        'docs.title': '文档',
+        'docs.subtitle': '探索我们的项目文档',
+        'docs.overview': '项目概述',
+        'docs.features': '核心功能',
+        'docs.tech': '技术栈',
+        'docs.links': '快速链接',
 
         // Download Section
         'download.title': '下载 Wocon',
@@ -105,6 +121,14 @@ const translations = {
         'video.subtitle': 'Mira nuestra historia',
         'video.placeholder': 'No disponible',
 
+        // Docs Section
+        'docs.title': 'Documentación',
+        'docs.subtitle': 'Explora nuestra documentación del proyecto',
+        'docs.overview': 'Descripción del Proyecto',
+        'docs.features': 'Características Principales',
+        'docs.tech': 'Stack Tecnológico',
+        'docs.links': 'Enlaces Rápidos',
+
         // Download Section
         'download.title': 'Descargar Wocon',
         'download.subtitle': 'Elige tu plataforma y comienza tu viaje',
@@ -146,6 +170,14 @@ const translations = {
         'video.title': 'प्रोमोशनल वीडियो',
         'video.subtitle': 'हमारी कहानी देखें',
         'video.placeholder': 'उपलब्ध नहीं',
+
+        // Docs Section
+        'docs.title': 'दस्तावेज़ीकरण',
+        'docs.subtitle': 'हमारे प्रोजेक्ट के दस्तावेज़ों का अन्वेषण करें',
+        'docs.overview': 'प्रोजेक्ट का अवलोकन',
+        'docs.features': 'मुख्य विशेषताएँ',
+        'docs.tech': 'प्रौद्योगिकी स्टैक',
+        'docs.links': 'त्वरित लिंक',
 
         // Download Section
         'download.title': 'Wocon डाउनलोड करें',
