@@ -210,7 +210,11 @@ function toggleHeroVideo() {
     // Toggle video play/pause
     if (videoContainer.classList.contains('active')) {
         video.play();
+        // Unmute video when playing
+        video.muted = false;
     } else {
         video.pause();
+        // Mute video when paused
+        video.muted = true;
     }
 }
