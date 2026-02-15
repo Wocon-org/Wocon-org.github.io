@@ -104,3 +104,29 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }
     });
 });
+
+// Toggle docs details
+function toggleDocsDetails(id) {
+    const details = document.getElementById(id + '-details');
+    const card = details.closest('.docs-card');
+    
+    // Toggle the active class and details visibility
+    card.classList.toggle('active');
+    details.classList.toggle('show');
+}
+
+// Close other docs details when opening a new one
+document.querySelectorAll('.docs-card').forEach(card => {
+    card.addEventListener('click', function() {
+        // Close all other cards
+        document.querySelectorAll('.docs-card').forEach(otherCard => {
+            if (otherCard !== this) {
+                otherCard.classList.remove('active');
+                const otherDetails = otherCard.querySelector('.docs-details');
+                if (otherDetails) {
+                    otherDetails.classList.remove('show');
+                }
+            }
+        });
+    });
+});

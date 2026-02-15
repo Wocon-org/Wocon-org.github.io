@@ -502,30 +502,26 @@ body {
     margin-top: var(--spacing-xl);
 }
 
-.docs-overview,
-.docs-features,
-.docs-tech,
-.docs-links {
+.docs-card {
     background: var(--background-light);
     padding: var(--spacing-xl);
     border-radius: 0;
     border: 2px solid var(--border-color);
     position: relative;
     transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.docs-overview:hover,
-.docs-features:hover,
-.docs-tech:hover,
-.docs-links:hover {
+.docs-card:hover {
     transform: translateY(-4px);
     border-color: var(--deep-blue);
 }
 
-.docs-overview::after,
-.docs-features::after,
-.docs-tech::after,
-.docs-links::after {
+.docs-card::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -537,38 +533,58 @@ body {
     transition: transform 0.3s ease;
 }
 
-.docs-overview:hover::after,
-.docs-features:hover::after,
-.docs-tech:hover::after,
-.docs-links:hover::after {
+.docs-card:hover::after {
     transform: scaleX(1);
 }
 
-.docs-overview h3,
-.docs-features h3,
-.docs-tech h3,
-.docs-links h3 {
+.docs-card h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-md);
     color: var(--deep-blue);
     text-transform: uppercase;
     letter-spacing: 1px;
+    flex: 1;
 }
 
-.docs-overview p {
+.docs-card-arrow {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+    transition: transform 0.3s ease;
+}
+
+.docs-card:hover .docs-card-arrow {
+    transform: translateX(5px);
+}
+
+.docs-card.active .docs-card-arrow {
+    transform: rotate(90deg);
+}
+
+.docs-details {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 2px solid var(--border-color);
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.docs-details.show {
+    display: block;
+}
+
+.docs-details p {
     color: var(--text-secondary);
     line-height: 1.6;
 }
 
-.docs-features ul,
-.docs-tech ul {
+.docs-details ul {
     list-style: none;
     color: var(--text-secondary);
 }
 
-.docs-features li,
-.docs-tech li {
+.docs-details li {
     margin-bottom: var(--spacing-sm);
     line-height: 1.5;
 }
@@ -591,6 +607,17 @@ body {
 .docs-link:hover {
     background: var(--deep-blue);
     color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Team Section */
@@ -682,6 +709,22 @@ body {
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.member-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.member-link:hover {
+    color: var(--deep-blue);
+}
+
+.member-link:hover .member-avatar {
+    background: var(--teal-green);
+    border-color: var(--teal-green);
 }
 
 .team-placeholder {

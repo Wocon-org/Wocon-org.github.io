@@ -203,35 +203,47 @@
             <h2 class="section-title" data-i18n="docs.title">Documentation</h2>
             <p class="section-subtitle" data-i18n="docs.subtitle">Explore our project documentation</p>
             <div class="docs-content">
-                <div class="docs-overview">
+                <div class="docs-card" onclick="toggleDocsDetails('overview')">
                     <h3 data-i18n="docs.overview">Project Overview</h3>
-                    <p>Wocon 是一个专注于旅游社交的应用，帮助用户找到志同道合的旅游伙伴，发现独特的旅行目的地。我们的目标是在你计划旅行的未知时刻，为你提供一个独一无二的解决方案。</p>
+                    <div class="docs-card-arrow">→</div>
+                    <div class="docs-details" id="overview-details">
+                        <p>Wocon 是一个专注于旅游社交的应用，帮助用户找到志同道合的旅游伙伴，发现独特的旅行目的地。我们的目标是在你计划旅行的未知时刻，为你提供一个独一无二的解决方案。</p>
+                    </div>
                 </div>
-                <div class="docs-features">
+                <div class="docs-card" onclick="toggleDocsDetails('features')">
                     <h3 data-i18n="docs.features">Core Features</h3>
-                    <ul>
-                        <li>🗺️ 交互式地图：基于 Leaflet.js 实现的流畅地图体验</li>
-                        <li>🌍 位置发现：随机跳转到全球热门旅游目的地</li>
-                        <li>📍 定位功能：获取并显示用户当前位置</li>
-                        <li>👥 旅游伙伴匹配：基于兴趣和目的地找到合适的旅行伙伴</li>
-                        <li>📋 行程管理：创建、分享和协作旅行计划</li>
-                        <li>🔍 地点搜索：快速查找旅游景点和住宿</li>
-                        <li>🎨 现代化界面：基于 Google MD3 设计系统的优雅体验</li>
-                    </ul>
+                    <div class="docs-card-arrow">→</div>
+                    <div class="docs-details" id="features-details">
+                        <ul>
+                            <li>🗺️ 交互式地图：基于 Leaflet.js 实现的流畅地图体验</li>
+                            <li>🌍 位置发现：随机跳转到全球热门旅游目的地</li>
+                            <li>📍 定位功能：获取并显示用户当前位置</li>
+                            <li>👥 旅游伙伴匹配：基于兴趣和目的地找到合适的旅行伙伴</li>
+                            <li>📋 行程管理：创建、分享和协作旅行计划</li>
+                            <li>🔍 地点搜索：快速查找旅游景点和住宿</li>
+                            <li>🎨 现代化界面：基于 Google MD3 设计系统的优雅体验</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="docs-tech">
+                <div class="docs-card" onclick="toggleDocsDetails('tech')">
                     <h3 data-i18n="docs.tech">Technology Stack</h3>
-                    <ul>
-                        <li>前端：Vue 3 Composition API、TypeScript、Leaflet.js</li>
-                        <li>后端：Supabase (数据库和用户认证)</li>
-                        <li>部署：Cloudflare Pages</li>
-                        <li>开发工具：VS Code、Trae、GitHub、TablePlus</li>
-                    </ul>
+                    <div class="docs-card-arrow">→</div>
+                    <div class="docs-details" id="tech-details">
+                        <ul>
+                            <li>前端：Vue 3 Composition API、TypeScript、Leaflet.js</li>
+                            <li>后端：Supabase (数据库和用户认证)</li>
+                            <li>部署：Cloudflare Pages</li>
+                            <li>开发工具：VS Code、Trae、GitHub、TablePlus</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="docs-links">
+                <div class="docs-card" onclick="toggleDocsDetails('links')">
                     <h3 data-i18n="docs.links">Quick Links</h3>
-                    <a href="https://github.com/wocon-org/wocon_pages" target="_blank" class="docs-link">GitHub 仓库</a>
-                    <a href="https://wocon.pages.dev" target="_blank" class="docs-link">在线演示</a>
+                    <div class="docs-card-arrow">→</div>
+                    <div class="docs-details" id="links-details">
+                        <a href="https://github.com/wocon-org/wocon_pages" target="_blank" class="docs-link">GitHub 仓库</a>
+                        <a href="https://wocon.pages.dev" target="_blank" class="docs-link">在线演示</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -245,9 +257,11 @@
             <div class="team-members">
                 <!-- CEO -->
                 <div class="team-member">
-                    <div class="member-avatar">C</div>
-                    <h3 class="member-name">Ceaser Zhao</h3>
-                    <p class="member-role">CEO</p>
+                    <a href="https://ceaserlab.github.io/" target="_blank" class="member-link">
+                        <div class="member-avatar">C</div>
+                        <h3 class="member-name">Ceaser Zhao</h3>
+                        <p class="member-role">CEO</p>
+                    </a>
                 </div>
                 <!-- Member -->
                 <div class="team-member">
