@@ -280,6 +280,24 @@
                         <p>Wocon 是一个专注于旅游社交的应用，帮助用户找到志同道合的旅游伙伴，发现独特的旅行目的地。我们的目标是在你计划旅行的未知时刻，为你提供一个独一无二的解决方案。</p>
                     </div>
                 </div>
+                <div class="docs-card" onclick="toggleDocsDetails('quickstart')" role="button" tabindex="0" aria-expanded="false" aria-controls="quickstart-details" aria-label="Toggle quick start details">
+                    <h3>Quick Start</h3>
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="quickstart-details" aria-live="polite">
+                        <h4>First Launch</h4>
+                        <p>When you first open Wocon, you'll be greeted with an interactive world map. Explore the interface, find your location, discover new destinations, search for places, and manage trips.</p>
+                        <h4>Basic Navigation</h4>
+                        <p>Use map controls to zoom in/out, pan, change layers, and reset view. Navigate through the sidebar to access Home, Connections, Search, Discover, and Plugins.</p>
+                        <h4>Tips for New Users</h4>
+                        <ul>
+                            <li>Start with Discover to get familiar with the map interface</li>
+                            <li>Try Location Services to test accuracy</li>
+                            <li>Explore Map Layers to find your preference</li>
+                            <li>Check Notifications for updates</li>
+                            <li>Experiment with Zoom to understand map scales</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="docs-card" onclick="toggleDocsDetails('features')" role="button" tabindex="0" aria-expanded="false" aria-controls="features-details" aria-label="Toggle core features details">
                     <h3 data-i18n="docs.features">Core Features</h3>
                     <div class="docs-card-arrow" aria-hidden="true">→</div>
@@ -295,6 +313,24 @@
                         </ul>
                     </div>
                 </div>
+                <div class="docs-card" onclick="toggleDocsDetails('detailed-features')" role="button" tabindex="0" aria-expanded="false" aria-controls="detailed-features-details" aria-label="Toggle detailed features details">
+                    <h3>Detailed Features</h3>
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="detailed-features-details" aria-live="polite">
+                        <h4>Interactive Map</h4>
+                        <p>Leaflet.js integration with smooth animations, multiple map styles, and responsive design.</p>
+                        <h4>Geolocation</h4>
+                        <p>Browser API integration with permission handling, error management, and continuous updates.</p>
+                        <h4>Discover Feature</h4>
+                        <p>Random destination selection with smart algorithm, smooth flight animations, and notification system.</p>
+                        <h4>Travel Companion Matching</h4>
+                        <p>User profiles with interest tags, compatibility scoring, and connection management.</p>
+                        <h4>Trip Management</h4>
+                        <p>Map-based planning, timeline view, collaborative editing, and sharing options.</p>
+                        <h4>Search Functionality</h4>
+                        <p>Global coverage with autocomplete, advanced filtering, and detailed result display.</p>
+                    </div>
+                </div>
                 <div class="docs-card" onclick="toggleDocsDetails('tech')" role="button" tabindex="0" aria-expanded="false" aria-controls="tech-details" aria-label="Toggle technology stack details">
                     <h3 data-i18n="docs.tech">Technology Stack</h3>
                     <div class="docs-card-arrow" aria-hidden="true">→</div>
@@ -307,12 +343,62 @@
                         </ul>
                     </div>
                 </div>
+                <div class="docs-card" onclick="toggleDocsDetails('faq')" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-details" aria-label="Toggle FAQ details">
+                    <h3>FAQ</h3>
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="faq-details" aria-live="polite">
+                        <h4>General Questions</h4>
+                        <p>Wocon is a travel-focused social application that helps users find like-minded travel companions and discover unique travel destinations. It's completely free to use.</p>
+                        <h4>Technical Questions</h4>
+                        <p>Wocon uses Vue 3, TypeScript, Leaflet.js, Supabase, and Cloudflare Pages. It supports the latest versions of Chrome, Firefox, Safari, and Edge.</p>
+                        <h4>Features</h4>
+                        <p>Learn how the Discover feature works, about location accuracy, saving favorite destinations, and travel companion matching.</p>
+                        <h4>Troubleshooting</h4>
+                        <p>Find solutions for location access issues, Discover feature problems, map loading issues, and OAuth sign-in problems.</p>
+                    </div>
+                </div>
+                <div class="docs-card" onclick="toggleDocsDetails('api')" role="button" tabindex="0" aria-expanded="false" aria-controls="api-details" aria-label="Toggle API documentation details">
+                    <h3>API Documentation</h3>
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="api-details" aria-live="polite">
+                        <ul>
+                            <li><strong>CONNECTION_MANAGEMENT_API.md</strong>: API for managing user connections and travel companions</li>
+                            <li><strong>FILE_UPLOAD_API.md</strong>: API for uploading and managing files</li>
+                            <li><strong>NOTIFICATION_SYSTEM_API.md</strong>: API for notification system</li>
+                            <li><strong>TRIP_MANAGEMENT_API.md</strong>: API for managing trips and itineraries</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="docs-card" onclick="toggleDocsDetails('deployment')" role="button" tabindex="0" aria-expanded="false" aria-controls="deployment-details" aria-label="Toggle deployment details">
+                    <h3>Deployment</h3>
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="deployment-details" aria-live="polite">
+                        <p>Deploy your own Wocon instance by cloning the repository, setting up a Supabase project, configuring environment variables, building the project, and deploying to Cloudflare Pages or your preferred hosting provider.</p>
+                        <p>Wocon can be deployed to any static hosting provider that supports Node.js build process, environment variables, and HTTPS.</p>
+                        <p>Deploy for free using Supabase Free Tier and Cloudflare Pages Free Tier.</p>
+                    </div>
+                </div>
+                <div class="docs-card" onclick="toggleDocsDetails('plugin')" role="button" tabindex="0" aria-expanded="false" aria-controls="plugin-details" aria-label="Toggle plugin development details">
+                    <h3>Plugin Development</h3>
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="plugin-details" aria-live="polite">
+                        <p>Learn how to develop plugins for Wocon to extend functionality and integrate with external services. The plugin system allows for custom features and enhancements to the core application.</p>
+                    </div>
+                </div>
+                <div class="docs-card" onclick="toggleDocsDetails('roadmap')" role="button" tabindex="0" aria-expanded="false" aria-controls="roadmap-details" aria-label="Toggle feature roadmap details">
+                    <h3>Feature Roadmap</h3>
+                    <div class="docs-card-arrow" aria-hidden="true">→</div>
+                    <div class="docs-details" id="roadmap-details" aria-live="polite">
+                        <p>Explore the future development plans for Wocon, including upcoming features, improvements, and enhancements to the platform.</p>
+                    </div>
+                </div>
                 <div class="docs-card" onclick="toggleDocsDetails('links')" role="button" tabindex="0" aria-expanded="false" aria-controls="links-details" aria-label="Toggle quick links details">
                     <h3 data-i18n="docs.links">Quick Links</h3>
                     <div class="docs-card-arrow" aria-hidden="true">→</div>
                     <div class="docs-details" id="links-details" aria-live="polite">
                         <a href="https://github.com/wocon-org/wocon_pages" target="_blank" class="docs-link" aria-label="GitHub repository">GitHub 仓库</a>
                         <a href="https://wocon.pages.dev" target="_blank" class="docs-link" aria-label="Online demo">在线演示</a>
+                        <a href="https://app.supabase.com" target="_blank" class="docs-link" aria-label="Supabase console">Supabase 控制台</a>
                     </div>
                 </div>
             </div>
